@@ -1,4 +1,21 @@
 ## Website Performance Optimization portfolio project
+Steps to Optimize pizza.html in views/main.js
+
+1. Change querySelectorAll into getElementsByClassNames. 
+
+2.  In updatePositions(), there is forced synchronious layout warning.
+	Inside the forloop  that loop over 'items', they run layout and style over and over again.
+	Take out "var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));" out of the loop
+	and set it in a array, then update style in batch over forloop.
+
+3.  Also, we dont need to look for '.mover' everytime we scroll.  Set '.mover' seletors in a global variable
+	and reuse.
+
+4. In changePizzaSize(), these is also forced synchronious layout warning.
+   Take two lines, 
+   		var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
+      	var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
+    outside of forloop. 	
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
