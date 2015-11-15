@@ -1,31 +1,16 @@
-Skip to content
-This repository  
-Search
-Pull requests
-Issues
-Gist
- @wookiecookie87
- Unwatch 1
-  Star 0
-  Fork 0 wookiecookie87/frontend-nanodegree-mobile-portfolio
- Tree: 9761363230  frontend-nanodegree-mobile-portfolio/views/js/main.js
-9761363  2 days ago
-@wookiecookie87 wookiecookie87 even faster
-2 contributors @wookiecookie87 @durant-udacity
-RawBlameHistory     562 lines (504 sloc)  23.7 KB
 /*
-Welcome to the 60fps project! Your goal is to make Cam's Pizzeria website run
-jank-free at 60 frames per second.
-There are two major issues in this code that lead to sub-60fps performance. Can
-you spot and fix both?
-Built into the code, you'll find a few instances of the User Timing API
-(window.performance), which will be console.log()ing frame rate data into the
-browser console. To learn more about User Timing API, check out:
-http://www.html5rocks.com/en/tutorials/webperformance/usertiming/
-Creator:
-Cameron Pittman, Udacity Course Developer
-cameron *at* udacity *dot* com
-*/
++Welcome to the 60fps project! Your goal is to make Cam's Pizzeria website run
++jank-free at 60 frames per second.
++There are two major issues in this code that lead to sub-60fps performance. Can
++you spot and fix both?
++Built into the code, you'll find a few instances of the User Timing API
++(window.performance), which will be console.log()ing frame rate data into the
++browser console. To learn more about User Timing API, check out:
++http://www.html5rocks.com/en/tutorials/webperformance/usertiming/
++Creator:
++Cameron Pittman, Udacity Course Developer
++cameron *at* udacity *dot* com
++*/
 
 // As you may have realized, this website randomly generates pizzas.
 // Here are arrays of all possible pizza ingredients.
@@ -468,7 +453,7 @@ var resizePizzas = function(size) {
     for (var i = 0; i < randomPizzas.length; i++) {
       randomPizzas[i].style.width = newwidth;
     }
-  }
+   }
 
   changePizzaSizes(size);
 
@@ -557,7 +542,7 @@ window.addEventListener('scroll', function(){
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 24; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
@@ -570,5 +555,3 @@ document.addEventListener('DOMContentLoaded', function() {
   var phase = getPhase()
   updatePositions(phase);
 });
-Status API Training Shop Blog About Pricing
-© 2015 GitHub, Inc. Terms Privacy Security Contact Help
